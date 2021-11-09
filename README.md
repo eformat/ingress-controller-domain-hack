@@ -149,8 +149,9 @@ welcome-test-ingress-welcome.redhatlabs.apps.openshift-4815-njnfd.do500.redhatla
 
 This poc could be made more concrete by implementing as:
 
-- Mutating WebHook
-- Operator
+- a Pod that runs on the cluster
+- a Mutating WebHook
+- an Operator
 
 This script does not handle edge cases, its a Poc ! Some more complex use cases could include:
 
