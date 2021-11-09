@@ -98,7 +98,7 @@ apps.openshift-4815-njnfd.do500.redhatlabs.dev
 oc get route welcome --template='{{ .spec.host }}'
 welcome-test-ingress-welcome.apps.openshift-4815-njnfd.do500.redhatlabs.dev
 
-# check name route exposed on
+# check the router name the route is exposed on
 oc get route welcome -o jsonpath='{ .status.ingress[0].routerName }'
 redhatlabs
 ```
@@ -154,7 +154,6 @@ This poc could be made more concrete by implementing as:
 
 This script does not handle edge cases, its a Poc ! Some more complex use cases could include:
 
-- `redhatlabs` IC is hardcoded
-- does not manage multiple IC's, could auto discover this list
+- `redhatlabs` IC is hardcoded, could discover this list
 - does not check for `Ingress`, only Routes
 - error handling
